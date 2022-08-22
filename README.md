@@ -1,5 +1,7 @@
 # Recon_Methodology
-Advance and Easy recon methodology (using this files you can easy to hunt on your target) 2 files are there 1 is for steps and another is for commands lines
+Advance and Easy recon methodology😎 :
+
+(Using this files you can easy to hunt on your target) 2 files are there 1 is for steps and another is for commands lines
 
 <img width="1440" alt="EAT sleep hack repeat (1)" src="https://user-images.githubusercontent.com/65278849/185999117-62a08ac2-630f-4873-ab3b-22ae4cf0071a.png">
 
@@ -17,7 +19,7 @@ Advance and Easy recon methodology (using this files you can easy to hunt on you
 
 
 
-## if you like then give a star or join my community following below link 
+## If You Like then SHARE or join group following below link for (Free Course) 🥰
 
 
 
