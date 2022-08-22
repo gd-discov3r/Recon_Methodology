@@ -132,7 +132,6 @@ HOW TO INSTALL GAU
 - sudo mv gau /usr/local/gau
 
 
-
 gau mail.inflectra.com > output.txt
 
 -------------------------------------------------------------------------------------------------------------------
@@ -154,3 +153,4 @@ gau mail.inflectra.com > output.txt
 
 -STEP 9
 
+coming soon..........
