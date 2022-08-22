@@ -1,0 +1,156 @@
+RECON (INFORMATION GATHERING)
+
+Our first goal or our first motive to find the information like SUBDOMAINS , SERVERS INFORMATION , SOME INTERNAL DIRECTORIES , CMS , DNS , PORTS and many more info ...
+
+So In Recon We need a VM Call Kali Linux
+
+OUR FIRST STEP is To find Subdomains of company
+
+- You can use many tools depends upon person to person 
+- There is no compulsation to use specific tool to find subdomains
+- TOOLS : subfinder , amass , sublist3r etc....
+- I personally use subfinder so you use this too ..
+
+
+We have seen some basic recon :)
+
+In today class we will do some automation and learn some shodan and how to find internal ip how to find internal js files without looking at source code . 
+
+1 - FIND SUBDOMAINS
+
+- SUBFINDER (SUBDOMAINS)
+
+- sudo apt-get install subfinder
+
+- SUBFINDER (SUBDOMAINS)
+
+split the subdomains with http or https 
+
+http - not secure (active)
+
+https = active (secured)
+
+
+2 - HTTPROBE (They split the sub-domains into http and https ) They will give live urls
+
+httprobe tool helps us to identify the subdomains are running on http or https and they helps also to identify real and live subdomains 
+
+cat sub.txt
+
+cat sub.txt | httprobe > http.txt
+
+
+3 - Manually Directory Bruteforcing 
+
+Directory bruteforcing (DIRSEARCH)
+
+https://github.com/maurosoria/dirsearch
+
+Kids use wordlists but if you are You just need to
+
+2xx 201 202 203 204 ...................... OK 
+
+3xx 301 302 303 304 means redirect somewhere
+
+4xx 401 402 403 404 means not found some error unautheticated pages or forbidden 
+
+5xx 505 INTERNAL SERVER ERROR 
+
+
+4 - https://www.vulnerable.live/clickjacking
+
+ 
+5 - Nuclei / wapiti / nessus 
+
+-------------------------------------------------------------------------------------------------------------------
+
+ADVANCE RECON :
+
+- STEP 1 ( TO FIND SUBDOMAINS )
+
+- You need two tools
+- Subfinder / Sublist3r / amass / assetfinder
+
+
+
+- STEP 2 ( TO SPLIT THE SUBDOMAINS INTO HTTP OR HTTPS )
+
+- You need to run httprobe tool on sort.txt
+
+
+- STEP 3
+
+https://www.youtube.com/watch?v=67chVkq3g0M&ab_channel=HacktifyCyberSecurity
+IS EASY TO TAKEOVER SUBD
+(shopify,github,aws) just search in output file.txt (subdomains)
+
+github:  edoverflow can-i-take-over-xyz
+tools : https://github.com/michenriksen/aquatone/blob/master/agents/url_takeover_detector.go
+        subzy/src/fringprint.go
+        subjack/fringprint.json
+
+
+- STEP 4 ( NUCLEI )
+
+nuclei is an automation tool helps to identify the vulnerabilities or CVE'S or some techonologies are used by web applicatoin and servers
+
+- You all know
+
+- STEP 5 ( waybackurls (tomnomnom) )
+
+- sudo apt-get install golang-go
+- go get github.com/tomnomnom/waybackurls
+- go install -v github.com/tomnomnom/waybackurls
+- cd ~/go/bin
+- sudo mv waybackurls /usr/local/waybackurls
+
+
+Waybackurls helps you to find some old and hidden urls and that urls sometimes contain some private information like tokens in urls , api-keys , userid's , sessionid's , some users email , uuid
+
+HOW TO RUN WAYBACKURLS ?
+
+- waybackurls -u https://xyz.com
+- cat http.txt | waybackurls > way.txt
+
+
+YOU NEED TO SEARCH : 
+
+api-key , @gmail , username , @ , userid , token= , password , user , uuid , sessionid , session= , cookie= 
+
+-------------------------------------------------------------------------------------------------------------------
+
+- STEP 6 ( HELPS US TO FETCH OR TO FIND SOME HIDDEN URLS )
+
+- TOOLNAME - gau
+
+HOW TO INSTALL GAU 
+
+- sudo apt-get install golang-go
+- go install github.com/lc/gau/v2/cmd/gau@latest
+- go install -v github.com/lc/gau/v2/cmd/gau@latest
+- cd /go/bin
+- sudo mv gau /usr/local/gau
+
+
+
+gau mail.inflectra.com > output.txt
+
+-------------------------------------------------------------------------------------------------------------------
+
+- STEP 6 HOW TO FIND COMPANY INTERNAL OR ORIGINAL IP's
+
+- Visit https://search.censys.io/ OR https://www.shodan.io/search?query=
+- Enter company domain 
+- You will see a lot of IP
+
+-------------------------------------------------------------------------------------------------------------------
+
+- STEP 8 
+
+- Download Automation tool from this link 
+- https://github.com/Viralmaniar/BigBountyRecon/releases/download/v0.1/BigBountyRecon.exe
+
+-------------------------------------------------------------------------------------------------------------------
+
+-STEP 9
+

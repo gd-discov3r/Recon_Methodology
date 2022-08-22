@@ -1,0 +1,56 @@
+Recon Methodology by G D ×͜× (gd_discov3r)
+
+Tools
+- Burpsuite / Zap proxy
+- Subfinder / Sublist3r / amass / assetfinder / dig
+- gau / gospider / waybackurls / paramspider
+- ffuf / gobuster / dirbuster / disearch
+- wappalyzer / whatweb
+- nuclei / nikto / wpscan
+- mxtoolbox / emkei
+- nmap / massscan / zmap
+- shodan / censys
+- httpx / httprobe / dnsdumpster
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- You create a folder (subfinder -d zivame.com | httpx --status-code --tittle)
+- subfinder -d zivame.com >sub.txt
+- sort sub.txt sub1.txt > sort.txt
+- cat sort.txt | wc -l
+- cat sort.txt
+- cat sort.txt | httprobe > live.txt
+
+- dig retail.zivame.com
+- curl
+- ping 
+- whois
+
+- github (edoverflow can-i-take-over-xyz)
+- aquatone/blob/master/agents/url_takeover_detector.go
+- subzy/src/fringprint.go
+- subjack/fringprint.json
+
+
+- dirsearch -u http://retail.zivame.com/
+
+- nuclei -u https://zivame.com
+- nuclei -l live.txt -t /home/kali/nuclei-templates/cves
+- nuclei -l live.txt -t /home/kali/nuclei-templates/vulnerablities
+- nuclei -l live.txt -t /home/kali/nuclei-templates/exposers
+
+- gau retail.zivame.com > save.txt
+
+- waybackurls -u https://xyz.com
+- cat live.txt | waybackurls > save.txt
+- api-key , @gmail , username , @ , userid , token= , password , user , uuid , sessionid , session= , cookiee
+
+- https://search.censys.io/
+- https://www.shodan.io/search?query=
+- https://mxtoolbox.com/ or https://whois.whoisxmlapi.com/
+- https://www.vulnerable.live/clickjacking
+
+
+
+
+
