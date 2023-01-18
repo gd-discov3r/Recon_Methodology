@@ -13,8 +13,7 @@ OUR FIRST STEP is To find Subdomains of company
 
 
 We have seen some basic recon :)
-
-In today class we will do some automation and learn some shodan and how to find internal ip how to find internal js files without looking at source code . 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1 - FIND SUBDOMAINS
 
@@ -30,6 +29,7 @@ http - not secure (active)
 
 https = active (secured)
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2 - HTTPROBE (They split the sub-domains into http and https ) They will give live urls
 
@@ -39,6 +39,7 @@ cat sub.txt
 
 cat sub.txt | httprobe > http.txt
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 3 - Manually Directory Bruteforcing 
 
@@ -56,13 +57,15 @@ Kids use wordlists but if you are You just need to
 
 5xx 505 INTERNAL SERVER ERROR 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 4 - https://www.vulnerable.live/clickjacking
 
- 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 5 - Nuclei / wapiti / nessus 
 
--------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ADVANCE RECON :
 
@@ -71,12 +74,13 @@ ADVANCE RECON :
 - You need two tools
 - Subfinder / Sublist3r / amass / assetfinder
 
-
+-----------------------------------------------------------------------------------------------------------
 
 - STEP 2 ( TO SPLIT THE SUBDOMAINS INTO HTTP OR HTTPS )
 
 - You need to run httprobe tool on sort.txt
 
+--------------------------------------------------------------------------------------------------------------
 
 - STEP 3
 
@@ -89,12 +93,13 @@ tools : https://github.com/michenriksen/aquatone/blob/master/agents/url_takeover
         subzy/src/fringprint.go
         subjack/fringprint.json
 
+-----------------------------------------------------------------------------------------------------------------------
 
 - STEP 4 ( NUCLEI )
 
 nuclei is an automation tool helps to identify the vulnerabilities or CVE'S or some techonologies are used by web applicatoin and servers
 
-- You all know
+-----------------------------------------------------------------------------------------------------------------------
 
 - STEP 5 ( waybackurls (tomnomnom) )
 
@@ -104,9 +109,7 @@ nuclei is an automation tool helps to identify the vulnerabilities or CVE'S or s
 - cd ~/go/bin
 - sudo mv waybackurls /usr/local/waybackurls
 
-
-Waybackurls helps you to find some old and hidden urls and that urls sometimes contain some private information like tokens in urls , api-keys , userid's , sessionid's , some users email , uuid
-
+---------------------------------------------------------------------------------------------------------------------------
 HOW TO RUN WAYBACKURLS ?
 
 - waybackurls -u https://xyz.com
@@ -132,11 +135,12 @@ HOW TO INSTALL GAU
 - sudo mv gau /usr/local/gau
 
 
+
 gau mail.inflectra.com > output.txt
 
 -------------------------------------------------------------------------------------------------------------------
 
-- STEP 6 HOW TO FIND COMPANY INTERNAL OR ORIGINAL IP's
+- STEP 7 HOW TO FIND COMPANY INTERNAL OR ORIGINAL IP's
 
 - Visit https://search.censys.io/ OR https://www.shodan.io/search?query=
 - Enter company domain 
@@ -146,11 +150,66 @@ gau mail.inflectra.com > output.txt
 
 - STEP 8 
 
-- Download Automation tool from this link 
-- https://github.com/Viralmaniar/BigBountyRecon/releases/download/v0.1/BigBountyRecon.exe
+- hyperlink in input field
+
+-------------------------------------------------------------------------------------------------------------------
+- STEP 9  open redirection 
+
+- url= , redirect= , url= , xyz= , test= , anything=
+- https://www.yammer.com/redirect?=https://evil.com
+- https://www.yammer.com/redirect///?=///https://google.com///evil.com
+- https://tools.intigriti.io/redirector/#
 
 -------------------------------------------------------------------------------------------------------------------
 
--STEP 9
+-STEP 10 host header attack
 
-coming soon..........
+-YOU HAVE AN APPLICATION - > INTERCEPT - > change the host - > If attack is possible there is Host header attack
+
+-------------------------------------------------------------------------------------------------------------------
+
+-STEP 11 Clickjacking
+
+- clickjacker.io
+- https://www.deadlinkchecker.com/
+
+--------------------------------------------------------------------------------------------------------------------
+
+- STEP 12 authentication bypass
+
+   -default credentials
+   -weak password (ddos)
+   -Remember Me Policy 
+   -BYPASS OTP or Mail
+   
+--------------------------------------------------------------------------------------------------------------------
+
+- STEP 13 XSS
+
+  -reflected xss | <img src=x onerror=prompt(document.cookie)>
+  -stored xss    | <img src=x onerror=prompt(document.cookie)>
+  -blind xss     |  xsshunter.com/app
+ 
+--------------------------------------------------------------------------------------------------------------------
+
+-Step 14 no rate limit
+
+- Add this header in request body 
+- X-Forwarded-Host: 127.0.0.1
+- X-Forwarded-For: 127.0.0.1
+- X-Forwarded-IP: 127.0.0.1
+- Select only 1 
+
+  - Change any parameter or change any number or change any input
+  
+  - Add \n after mail %00 , %01 , %po
+  
+--------------------------------------------------------------------------------------------------------------------
+
+-STEP 15 Exif meta data
+
+https://jimpl.com/  
+
+--------------------------------------------------------------------------------------------------------------------
+- Download Automation tool from this link 
+- https://github.com/Viralmaniar/BigBountyRecon/releases/download/v0.1/BigBountyRecon.exe
