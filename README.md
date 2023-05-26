@@ -13,7 +13,7 @@ Advance and Easy recon methodology😎 :
 - [Denial of Service (DoS)](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Denial%20Of%20Service.md)
 - [Exposed Source Code](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Exposed%20Source%20Code.md)
 - [Host Header Injection](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Host%20Header%20Injection.md)
-- [Insecure Direct Object References (IDOR)]((https://github.com/gd-discov3r/Recon_Methodology/blob/main/Insecure%20Direct%20Object%20References.md)
+- [Insecure Direct Object References (IDOR)](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Insecure%20Direct%20Object%20References.md)
 - [Local File Inclusion (LFI)](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Local%20File%20Inclusion.md)
 - [Mass Assignment](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Mass%20Assignment.md)
 - [NoSQL Injection (NoSQLi)](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/NoSQL%20Injection.md)
