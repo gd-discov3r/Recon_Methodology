@@ -6,14 +6,14 @@ Advance and Easy recon methodology😎 :
 <img width="1440" alt="EAT sleep hack repeat (1)" src="https://user-images.githubusercontent.com/65278849/185999117-62a08ac2-630f-4873-ab3b-22ae4cf0071a.png">
 
 ## List Vulnerability
-- [Arbitrary File Upload](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/main/Arbitrary%20File%20Upload.md)
-- [CRLF Injection](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/CRLF%20Injection.md)
-- [Cross Site Request Forgery (CSRF)](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Cross%20Site%20Request%20Forgery.md)
-- [Cross Site Scripting (XSS)](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Cross%20Site%20Scripting.md)
-- [Denial of Service (DoS)](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Denial%20Of%20Service.md)
-- [Exposed Source Code](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Exposed%20Source%20Code.md)
-- [Host Header Injection](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Host%20Header%20Injection.md)
-- [Insecure Direct Object References (IDOR)](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Insecure%20Direct%20Object%20References.md)
+- [Arbitrary File Upload](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Arbitrary%20File%20Upload.md)
+- [CRLF Injection](https://github.com/gd-discov3r/Recon_Methodology/blob/main/CRLF%20Injection.md)
+- [Cross Site Request Forgery (CSRF)](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Cross%20Site%20Request%20Forgery.md)
+- [Cross Site Scripting (XSS)](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Cross%20Site%20Scripting.md)
+- [Denial of Service (DoS)](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Denial%20Of%20Service.md)
+- [Exposed Source Code](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Exposed%20Source%20Code.md)
+- [Host Header Injection](https://github.com/gd-discov3r/Recon_Methodology/blob/main/Host%20Header%20Injection.md)
+- [Insecure Direct Object References (IDOR)]([(https://github.com/gd-discov3r/Recon_Methodology/blob/main/Insecure%20Direct%20Object%20References.md))
 - [Local File Inclusion (LFI)](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Local%20File%20Inclusion.md)
 - [Mass Assignment](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/Mass%20Assignment.md)
 - [NoSQL Injection (NoSQLi)](https://github.com/trilokdhaked/Bug-Bounty-Methodology/blob/master/NoSQL%20Injection.md)
