@@ -14,7 +14,7 @@ Tools
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-- You create a folder (subfinder -d zivame.com | httpx --status-code --tittle)
+- You create a folder 
 - subfinder -d zivame.com >sub.txt
 - sort sub.txt sub1.txt > sort.txt
 - cat sort.txt | wc -l
@@ -22,15 +22,16 @@ Tools
 - cat sort.txt | httprobe > live.txt
 
 - dig retail.zivame.com
+- dirsearch -> JSON to lock
 - curl
 - ping 
 - whois
+
 
 - github (edoverflow can-i-take-over-xyz)
 - aquatone/blob/master/agents/url_takeover_detector.go
 - subzy/src/fringprint.go
 - subjack/fringprint.json
-
 
 - dirsearch -u http://retail.zivame.com/
 
