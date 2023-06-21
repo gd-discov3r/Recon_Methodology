@@ -26,6 +26,7 @@ Tools
 - curl
 - ping 
 - whois
+- ping localhost.drive2.ru
 
 
 - github (edoverflow can-i-take-over-xyz)
