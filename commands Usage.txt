@@ -52,6 +52,55 @@ Tools
 - https://mxtoolbox.com/ or https://whois.whoisxmlapi.com/
 - https://www.vulnerable.live/clickjacking
 
+-https://tools.intigriti.io/redirector/#
+
+
+-  Host : inflectra.com
+     X-Forwarded-Host : www.bing.com
+-  Host : www.bing.com
+     X-Forwarded-Host : inflectra.com
+-  HOST : www.zivame.com@www.bing.com
+-  Refferer : https://www.bing.com/
+-  You can change the Post method ..
+
+
+- clickjacker.io
+
+- https://www.deadlinkchecker.com/
+
+- 0 - 1
+
+- 1 - 0
+                                                   parameter tempering
+- false - true
+
+- failed - success
+
+- 404 442 NOT FOUND - 200 OK
+
+
+-default credentials
+-weak password (ddos)
+-Remember Me Policy 
+-BYPASS OTP or Mail
+  
+  
+-reflected xss | <img src=x onerror=prompt(document.cookie)>
+-stored xss    | <img src=x onerror=prompt(document.cookie)>
+-blind xss     |  xsshunter.com/app
+ 
+
+- Add this header in request body 
+- X-Forwarded-Host: 127.0.0.1
+- X-Forwarded-For: 127.0.0.1
+- X-Forwarded-IP: 127.0.0.1
+- Select only 1 
+- Change any parameter or change any number or change any input
+- Add \n after mail %00 , %01 , %po
+
+
+- https://jimpl.com/  
+
 
 
 
