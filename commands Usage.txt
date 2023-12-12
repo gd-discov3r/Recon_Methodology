@@ -15,11 +15,15 @@ Tools
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - You create a folder 
+- subfinder - apple.com | httpx -mc 200,404,401,403 | tee apple_valid.txt
+- cat apple_valid.txt | waybackurls | tee wb_cdn.txt
+- cat wb_cdn.txt | grep keywords (api_key,api,token,secret,/api/,config.js)
 - subfinder -d zivame.com >sub.txt
 - sort sub.txt sub1.txt > sort.txt
 - cat sort.txt | wc -l
 - cat sort.txt
 - cat sort.txt | httprobe > live.txt
+
 
 - dig retail.zivame.com
 - dirsearch -> JSON to lock
