@@ -1,0 +1,186 @@
+__________                                   __________               ________ ________    
+\______   \  ____   ____   ____    ____      \______   \ ___.__.     /  _____/ \______ \   
+ |       _/_/ __ \_/ ___\ /  _ \  /    \      |    |  _/<   |  |    /   \  ___  |    |  \  
+ |    |   \\  ___/\  \___(  <_> )|   |  \     |    |   \ \___  |    \    \_\  \ |    `   \ 
+ |____|_  / \___  >\___  >\____/ |___|  /     |______  / / ____|     \______  //_______  / 
+        \/      \/     \/             \/             \/  \/                 \/         \/     
+
+ cut -d " " -f 1,2,3  > wc -l > ls -la
+SubDomain→ ASN→ Url(wayback)→ PortScan(nmap,mass,nabbu)→ Leak(GitHub,JS,) → CORS Mis→ HHIJ→ BusinessFlow→ EndPoints(arjun,kartana,gau)→ CSRF→ SSRF→ XSS→ SSTI→ DirectoryTrav→ Openredir→ LFI/RFI→ XXE → RCE→ CVE
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IP Recon
+subdomain Recon
+url recon how to dig and pull info from jsecrets
+data forward to exploitation process
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ASN - bgp.he.net
+
+IP Enum - Shodan, karmav2, shosubgo
+
+acquisitions - Crunchbase
+
+Cloud recon  -  cat *.txt | grep -F ".redbull.com" | awk -F'-- ' '{print $2}'| tr ' ' '\n' | tr '[' ' ‘| sed 's/ //’| sed 's/\]//’| grep -F ".redbull.com“ | sort -u
+
+Directory listing - spider, hakawler, kartana, xnllinkfinder, paramspider
+
+Google dorks - dork king, fofa,  crt.sh, sufinder, amass, censys, and shodan. Github subdomains
+
+Sub brute  - cat <file_of_subdomains.txt> | dnsgen | puredns resolve --resolvers resolvers.txt
+
+Screenshot: eyewitness, aqutone
+
+Orgin ip
+
+favicon - favfreak
+
+Content discovery - gobuster, feroxbuster, fuff, dirsearch, gau, waymore. waybackurls
+
+APILeaks
+
+XSS - BXSSHunter
+
+SQLI - ghauri
+
+JS - jsecrets, jsscan, jsfscan
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+IP recon - sudo nmap -script=vuln -sV -sT -iL any.txt -oN output.txt
+
+            sudo nmap -sU -sV -iL any.txt -oN output.txt
+          
+		     
+ASN     - https://bgp.he.net/
+
+
+
+IP Enum - 6N3BdVkN1oA9DZqJ0luVfqMvX1xQyGcu
+        - Shodan - ssl:"Apple" +200: Searches for SSL certificates related to "Apple" with an HTTP status code of 200.
+
+                 - org:"Amazon" ssl:"Apple": Refines the search to SSL certificates related to "Apple" within the organization "Amazon."
+
+                 - ssl.cert.subject.cn:"apple.com" +200: Searches for SSL certificates with the subject common name "apple.com" and an HTTP status code of 200
+
+                 - ssl.cert.issuer.cn:"apple.com" +200: Searches for SSL certificates with the issuer common name "apple.com" and an HTTP status code of 200.
+
+        - karmav2 -ip        bash karma_v2 -d google.com -l -1 -ip
+                  -asn	     bash karma_v2 -d google.com -l -1 -asn
+                  -cve	     bash karma_v2 -d google.com -l -1 -cve
+                  -cveid	 bash karma_v2 -d google.com -l -1 -cveid CVE-2021-34473
+                  -favicon	 bash karma_v2 -d google.com -l -1 -favicon
+                  -leaks	 bash karma_v2 -d google.com -l -1 -leaks
+                  -deep	     bash karma_v2 -d google.com -l -1 -deep
+                  -count	 bash karma_v2 -d google.com -l -1 -count
+		
+		- shosubgo - shosubgo -d redbull.com -s 6N3BdVkN1oA9DZqJ0luVfqMvX1xQyGcu
+		
+Acquisitions - Crunchbase -> https://www.crunchbase.com/home	
+		
+Cloud recon  -  sudo nmap --script hostmap-crtsh.nse google.com
+             -  recon.cloud -d hackerone.com -o result.txt
+			 -  echo "redbull.com" | recon.cloud
+			 -  echo "redbull.com" | recon.cloud -only-ip
+			 
+Directory listing - gospider - gospider -s "https://google.com/" -o output -c 10 -d 1  ,  gospider -S sites.txt -o output -c 10 -d 1  
+             
+        		  - hakawler - cat urls.txt | hakrawler , echo https://google.com | hakrawler -subs
+
+				  - kartana  - katana -u https://tesla.com,https://tesla.com  ,  katana -list url_list.txt
+
+     			  - xnllinkfinder  -  xnLinkFinder -i google.com -sf google.com  ,  xnLinkFinder -i google.com -sp https://www.google.com -sf google.* -d 2 -v , xnLinkFinder -i redbull.com -sp https://redbull.com -sf rebbull.* -d 3 | unfurl keys | sort -u
+
+				  - paramspider	 -  paramspider -d example.com , paramspider -l domains.txt  ,  paramspider -d example.com -p '"><h1>reflection</h1>'	  
+
+Google dorks  - dork king   -  https://dorkking.blindf.com/   ,   site:s3.amazonaws.com "example.com"  ,  Site:*apple.com ext:xlsx
+             
+    		  - fofa        -  https://en.fofa.info/
+
+			  - crt.sh      -  https://crt.sh/   , curl -s https://crt.sh/\?q\=\amazon.com\&output\=json | jq -r '.[].name_value' | grep -Po '(\w+\.\w+\.\w+)$'
+
+			  - subfinder    -  subfinder -dL domain.txt -all -recursive -o sub.txt  ,  subfinder -d google.com -all  -recursive > subdomain.txt
+
+			  -	assetfinder -  echo google.com | assetfinder -subs-only , assetfinder -subs-only Netflix.com > place.txt
+
+			  - httpx       -  cat  subdomains.txt | httpx-toolkit -ports 443,80,8080,8000,8888 -threads 200 > subdomains_alive.txt ,  cat sub.txt | httpx -status-code -tech-detect -title > cat any.txt | httpx -mc 200
+
+			  -	amass       -  amass intel -active -asn 394161 | tee -a asns4  ,  amass -d google.com , amass intel - org "redbull"
+
+			  -	censys      -  https://search.censys.io/
+
+			  -	shodan      -  https://www.shodan.io/dashboard
+
+			  -	Github subdomains  - github-subdomains -d mydukaan.io -t 
+
+Sub brute   -  cat <file_of_subdomains.txt> | dnsgen | puredns resolve --resolvers resolvers.txt  ,   puredns bruteforce all.txt tesla.com -r resolvers.txt
+
+Screenshot  - eyewitness -
+            - aqutone    -
+			- gowitness  -  gowitness single -o /screenshots/twitter.png https://twitter.com
+
+Orgin ip    -  python cloudflair.py myvulnerable.site
+
+favicon     -  favfreak - cat urls.txt | python3 favfreak.py -o output
+
+Content discovery -  gobuster    -   gobuster dns -d google.com -w ~/wordlists/subdomains.txt -i  ,  gobuster dir -u https://buffered.io -w ~/wordlists/shortlist.txt  , 
+                                     gobuster dir -u https://buffered.io -w ~/wordlists/shortlist.txt -q -n -e  ,  gobuster vhost -u https://mysite.com -w common-vhosts.txt , 
+                                     gobuster fuzz -u https://example.com?FUZZ=test -w parameter-names.txt , gobuster s3 -w bucket-names.txt
+
+                  -  feroxbuster -
+				  
+				  -	 fuff        -   ffuf -w Subdomain.txt -u https://apple.com -H "Host: FUZZ.apple.com" -mc 200
+				  
+				  -	 dirsearch   -
+				  
+				  -  gau         -    cat domains.txt | gau --threads 5
+                                      gau example.com google.com
+                                      gau --o example-urls.txt example.com
+                                      gau --blacklist png,jpg,gif,jpeg,img,svg,mp3,mp4,eot,woff2,css example.com
+				  
+				  -	 waymore     -  waymore -i redbull.com -mode U ,  waymore -i redbull.com -f -xcc -xav -xu, -xvt -l 200 -from 2022 , xnLinkFinder -i ~/Tools/waymore/results/redbull.com -sp https://www.redbull.com -sf redbull.com -o redbull.txt
+                                    waymore -i redbull.com -mode U | unfurl keys | sort -u > cat redbull_subs.txt | waymore
+				  
+				  -  waybackurls -  https://web.archive.org/cdx/search/cdx?url=*.apple.com&output=text&fl=original&collapse=urlkey
+
+APILeaks    - 
+
+
+                  -       gf     - cat any.txt | gf xss,ssrf etc 
+
+sed 's/^/https:\/\//' shodan.txt | aquatone
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
